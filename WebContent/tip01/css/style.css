@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body{
+	font-family: 'Noto Sans KR', sans-serif; font-size: 20pt;
+	display : flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.star-rating{
+	background-color: #333;
+	width: 300px;
+	text-align: center;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.star-rating div {
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+
+.stars {
+}
+
+.stars .fa {
+	cursor: pointer;
+}
+
+.stars .fa.active {
+	color: yellow;
+	text-shadow: 0 0 5px yellow;
+}
+
+.print {
+	color : #fff;
+}

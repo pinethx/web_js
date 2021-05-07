@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+body {
+	background-color: #41729F;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+section {
+	width:800px;
+}
+
+.btn {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+/* 	border: 1px solid red; */
+	overflow: hidden;
+}
+
+.btn li{
+	margin: 0;
+	float: left;
+	border: none;
+	background-color: #C3E0E5;
+	width:160px;
+	border-radius: 10px 10px 0 0;
+	text-align: center;
+	height: 40px; 
+	line-height: 230%;
+}
+
+.btn li.active {
+	background-color: #274472;
+	color : #fff;
+}
+
+.tabs {
+	
+}
+
+.tabs div {
+	background-color: #fff;
+	height: 200px;
+	display: none;
+}
+
+.tabs div.active{
+	display: block;
+}

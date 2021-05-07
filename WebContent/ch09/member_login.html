@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function(){
+		var $frm = $(".login_f");
+		$frm.on("submit", function(e){
+			e.preventDefault();
+			var myData = $frm.serialize();
+			
+			$.ajax({
+				type: "POST", url = $frm.attr("action"), data:myData, success:function(res){
+					if(res){
+						var jsonData = JSON.parse(res);
+						var mssage = jsonData.user_name + "(" + jsonData.user_id + ")" + "님 반갑습니다.";
+						$(".login_wrap").html(message);
+					}
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="login_wrap">
+		<h1>Login</h1>
+		<form class="login_f" method='post' action="memaber_loign_ok.jsp">
+			<p>
+				<label for="user_id">ID</label>
+				<input type="text" name="user_id" id="user_id" value="korean" />
+			</p>
+			<p>
+				<label for="user__pw">PASSWORD</label>
+				<input type="password" name="user_pw" id="user_pw" value="12345" />
+			</p>
+			<p><input type="submit" value="Login" class="login_btn" /></p>
+		</form>
+	</div>
+</body>
+</html>

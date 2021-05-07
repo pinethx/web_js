@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+body {
+	margin: 0;
+	background: linear-gradient(0deg, rgba(245,245,255,1) 0%, rgba(208,239,250,1) 35%, rgba(184,232,248,1) 100%);
+	font-family: 'Noto Sans KR', sans-serif;
+	line-height: 200%;
+	display : flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+section {
+	width:800px;
+}
+
+.heading {
+	text-align:center;
+	padding-bottom: 30px;
+	color : #000066;
+}
+
+.heading input[type=text]{
+	outline: none;
+	box-sizing: border-box;
+	width: 600px;
+	padding: 5px;
+	border: none;
+	box-shadow: 5px 5px 5px #003060;
+	background: #fff url("../images/search-icon.png") no-repeat center left 5px;
+	background-size: 20px;
+	padding-left: 30px;
+}
+
+.heading input[type=text]::placeholder{
+	font-style: italic;
+	transition: 0.5s;
+}
+
+.heading input[type=text]:focus::placeholder{
+	opacity:0;
+}
+
+.heading h2 {
+	font-size: 32pt;
+}
+
+.heading span {
+	color: #E43D40;
+}
+
+.btn {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+/* 	border: 1px solid red; */
+	overflow: hidden;
+}
+
+.btn li{
+	margin: 0;
+	float: left;
+	border: none;
+	background-color: #C3E0E5;
+	width:160px;
+	border-radius: 10px 10px 0 0;
+	text-align: center;
+	height: 40px; 
+	line-height: 230%;
+}
+
+.btn li:hover {
+	background-color: #68BBE3;
+}
+
+.btn li.active {
+	background-color: #274472;
+	color : #fff;
+}
+
+.tabs {
+	background-color: #fff;
+	box-sizing: border-box;
+	padding: 0px 0px 0px 20px;
+	text-align: justify;
+}
+
+.tabs div {
+	height: 600px;
+	display: none;
+	overflow:auto;
+	padding: 20px 20px 20px 0px;
+}
+
+.tabs div::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+
+.tabs div::-webkit-scrollbar-thumb {
+    width: 5px;
+	background-color: #003060;
+}
+
+.tabs div.active{
+	display: block;
+}
+
+/* tab content */
+.tabs div h3 {
+	font-size : 24pt;
+	text-align : center;
+	padding : 0;
+}
+
+.tabs div img {float : left ; margin-right: 20px;}

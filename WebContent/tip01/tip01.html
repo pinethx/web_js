@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>별점 주기</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<script>
+$(function (){
+	$(".stars .fa").click(function() {
+		$(this).addClass("active");
+		$(this).prevAll().addClass("active");
+		$(this).nextAll().removeClass("active");
+		
+		var starRate = $(this).index() + 1;
+		/* $('.print').text(starRate); */
+		var notice = ['Bad', 'Not Bad', 'So So', 'Good', 'Perfect'];
+		$(".print").html('<img src="images/star-lv'+starRate+'.png"> ' + notice[starRate-1]);
+	});
+});
+</script>
+</head>
+<body>
+	<div class = "star-rating">
+		<div class="stars">
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+			<i class="fa fa-star"></i>
+		</div>
+		<div class="print">plz</div>
+	</div>
+</body>
+</html>
